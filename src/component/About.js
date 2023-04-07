@@ -1,0 +1,63 @@
+import React from 'react'
+// import React, { useState } from 'react'
+
+export default function About(props) {
+    // const [mystyle, setmystyle] = useState({
+    //     // color: 'white',
+    //     // backgroundColor: 'black'
+    // })
+
+    let mystyle = {
+        color: props.mode === 'dark'?'white':'#042743',
+        backgroundColor: props.mode === 'dark'?'rgb(36 74 104)':'white'
+    }
+    return (
+        <div className='container'style={{color:props.mode==='dark'?'white':'#042743'}} >
+            <h1 className='my-3'>About Us</h1>
+            <div className="accordion" id="accordionExample">
+                <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingOne">
+                        <button className="accordion-button" style={mystyle} type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <strong>Analyze Your Text</strong> 
+                        </button>
+                    </h2>
+                    <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div className="accordion-body" style={mystyle}>
+                        Texteditor gives you to analyze your text quickly and efficiently. 
+                           </div>
+                    </div>
+                </div>
+                <div className="accordion-item" style={mystyle}>
+                    <h2 className="accordion-header" id="headingTwo">
+                        <button className="accordion-button collapsed" style={mystyle} type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <strong>Browser Compatible</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div className="accordion-body" style={mystyle} >
+                        This word counter software works in a web browsers such as chrome, firefox,
+                        opera, internet explorer etc. It suits to count character in facebook, blog,
+                        books, excel document, pdf etc.
+                            </div>
+                    </div>
+                </div>
+                <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingThree">
+                        <button className="accordion-button collapsed" style={mystyle} type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <strong>Word Counter</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div className="accordion-body" style={mystyle}>
+                        Online word counters are a perfect tool for anyone who needs to keep a count of their words and characters, 
+                        but doesn't use Microsoft Word. Imagine writing a piece and having to manually count the words! Not only will it take forever, 
+                        but there's a chance you won't be wholly accurate.
+                        This tool is also a good way to assess your words per minute typing rate. Simply time yourself timing for five minutes. 
+                        Type into the box on the online word counter. When the time is up, divide your total word count by five, and you have your average words per minute rate    
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}

@@ -1,0 +1,31 @@
+body{
+  background-color: lightblue;
+}
+#mybox{
+   color:crimson;
+}
+.btn:hover{
+     background-color: green;
+}
+p{
+  color:crimson;
+}
+.form-check-input:checked {
+  background-color: black;
+  border-color: grey;
+}
+.accordion.button::after{
+  filter: invert(1);
+}
+footer{
+  height: 10px;
+  width: auto;
+  display:flex ;
+  justify-content:center; 
+  align-items:center; 
+  margin-bottom: 5px;
+  border:top; 
+  bottom: 0%;
+  font-weight: bold;
+  color: black;
+}
